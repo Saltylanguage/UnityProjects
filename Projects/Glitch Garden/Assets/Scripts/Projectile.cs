@@ -7,17 +7,16 @@ public class Projectile : MonoBehaviour {
     [SerializeField] float speed;
     [SerializeField] float rotationSpeed;
     [SerializeField] int damage = 50;
-    [SerializeField] Rigidbody2D mRigidBody;
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Health enemyHealth = collision.GetComponent<Health>();
-        if(enemyHealth)
+        Attacker attacker = collision.GetComponent<Attacker>();
+        if(attacker && enemyHealth)
         {
             enemyHealth.TakeDamage(damage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 
     void Update ()
