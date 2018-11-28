@@ -63,7 +63,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Attacker.cs" />
     <Compile Include="Assets\Scripts\AttackerSpawner.cs" />
+    <Compile Include="Assets\Scripts\Currency.cs" />
+    <Compile Include="Assets\Scripts\CurrencySpawner.cs" />
+    <Compile Include="Assets\Scripts\Defender.cs" />
+    <Compile Include="Assets\Scripts\DefenderIcon.cs" />
     <Compile Include="Assets\Scripts\DefenderSpawner.cs" />
+    <Compile Include="Assets\Scripts\EconomyManager.cs" />
     <Compile Include="Assets\Scripts\GameLoader.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
