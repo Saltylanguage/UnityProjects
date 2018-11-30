@@ -42,7 +42,7 @@ public class ConvexHullGenerator
     {
         for (int pointIndex = 0; pointIndex < roomCount; pointIndex++)
         {
-            Vector2 point = Random.insideUnitCircle * roomCount/10;
+            Vector2 point = Random.insideUnitCircle * roomCount / 10;
             allPoints.Add(new Vector3(point.x, 0.0f, point.y));
         }
     }
@@ -55,39 +55,46 @@ public class ConvexHullGenerator
     }
     public void Sort(List<Vector3> points)
     {
-        points.Sort((a, b) => a.z.CompareTo(b.z));
-        SortByAngle(ref points);
+        if (points.Count > 1)
+        {
+            points.Sort((a, b) => a.z.CompareTo(b.z));
+            SortByAngle(ref points);
+        }
     }
 
     public List<Vector3> GenerateConvexHull(List<Vector3> points)
     {
         List<Vector3> convexStack = new List<Vector3>();
-        convexStack.Add(points[0]);
-        convexStack.Add(points[1]);
-
-        for (int i = 2; i < points.Count; ++i)
+        if (points.Count > 1)
         {
-            Vector3 a = convexStack[convexStack.Count - 2];
-            Vector3 b = convexStack[convexStack.Count - 1];
-            Vector3 temp = points[i];
+            convexStack.Add(points[0]);
+            convexStack.Add(points[1]);
 
-            float result = LeftRightCheck(a, b, temp);
 
-            if (result > 0)
+            for (int i = 2; i < points.Count; ++i)
             {
-                convexStack.Add(temp);
-            }
-            else if (result < 0)
-            {
-                convexStack.RemoveAt(convexStack.Count - 1);
-                --i;
-            }
-            else
-            {
-                if (Vector3.SqrMagnitude(b - a) < Vector3.SqrMagnitude(temp - a))
+                Vector3 a = convexStack[convexStack.Count - 2];
+                Vector3 b = convexStack[convexStack.Count - 1];
+                Vector3 temp = points[i];
+
+                float result = LeftRightCheck(a, b, temp);
+
+                if (result > 0)
+                {
+                    convexStack.Add(temp);
+                }
+                else if (result < 0)
                 {
                     convexStack.RemoveAt(convexStack.Count - 1);
-                    convexStack.Add(temp);
+                    --i;
+                }
+                else
+                {
+                    if (Vector3.SqrMagnitude(b - a) < Vector3.SqrMagnitude(temp - a))
+                    {
+                        convexStack.RemoveAt(convexStack.Count - 1);
+                        convexStack.Add(temp);
+                    }
                 }
             }
         }

@@ -21,6 +21,7 @@ public class EconomyManager : MonoBehaviour
         currentMoney += value;
         scoreText.text = currentMoney.ToString();
     }
+
     public void SpendCurrency(int value)
     {
         currentMoney -= value;

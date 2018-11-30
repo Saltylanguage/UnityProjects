@@ -78,6 +78,9 @@ public class Triangulator : MonoBehaviour
 
     void GenerateTriangleFan(List<Vector3> points)
     {
+        if(points.Count > 3)
+        {
+
         for (int i = 1; i < points.Count - 2; i++)
         {
             mTriangles.Add(new Geometry.Triangle
@@ -89,6 +92,7 @@ public class Triangulator : MonoBehaviour
                       (points[0],
                        points[points.Count - 2],
                        points[points.Count - 1]));
+        }
     }
     void SubdivideTriangleFan(List<Geometry.Triangle> triangles)
     {
@@ -155,15 +159,20 @@ public class Triangulator : MonoBehaviour
                             pointsFormingAngle = Geometry.FindPointsFormingAngle(triangles[subTriIndex], uncommonPoint);
 
                             float theta2 = Mathf.Ceil(180 - Geometry.CalculateAngleInDegs(pointsFormingAngle[0], pointsFormingAngle[1], pointsFormingAngle[2]));
+
+                            bool invalidAngle1 = false;
                             if (theta1 == float.NaN || theta1 == 180 )
                             {
                                 Debug.Log("Theta1 = " + theta1);
+                                invalidAngle1 = true;
                             }
+                            bool invalidAngle2 = false;
                             if (theta2 == float.NaN || theta2 == 180 )
                             {
                                 Debug.Log("Theta2 = " + theta2);
+                                invalidAngle2 = true;
                             }
-                            if (theta1 + theta2 >= 180)
+                            if (theta1 + theta2 >= 180 || invalidAngle1 || invalidAngle2)
                             {
                                 Geometry.Triangle temp1 = new Geometry.Triangle(edgeFlipPoints[0], edgeFlipPoints[1], edgeFlipPoints[3]);
                                 Geometry.Triangle temp2 = new Geometry.Triangle(edgeFlipPoints[0], edgeFlipPoints[3], edgeFlipPoints[2]);
