@@ -14,6 +14,7 @@ public class TriangulatorEditor : Editor
 
         if(GUILayout.Button("Triangulate"))
         {
+            triangulator.ClearTriangles();
             triangulator.TriangulateRooms();
         }
     }

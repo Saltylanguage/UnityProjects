@@ -8,12 +8,10 @@ using UnityEditor;
 public class Triangulator : MonoBehaviour
 {
     public ConvexHullGenerator ch_Gen = new ConvexHullGenerator();
-    public List<Geometry.Triangle> mTriangles = new List<Geometry.Triangle>();
+    List<Geometry.Triangle> mTriangles = new List<Geometry.Triangle>();
     RoomGenerator roomGen;
 
-    [SerializeField]
-    public int roomCount;
-    [SerializeField]
+    int roomCount;
     int circleIndex = 0;
 
     private void Start()
@@ -59,6 +57,11 @@ public class Triangulator : MonoBehaviour
         {
             DrawTriangles();
         }
+    }
+
+    public void ClearTriangles()
+    {
+        mTriangles.Clear();
     }
 
     private void OnDrawGizmos()
@@ -161,13 +164,13 @@ public class Triangulator : MonoBehaviour
                             float theta2 = Mathf.Ceil(180 - Geometry.CalculateAngleInDegs(pointsFormingAngle[0], pointsFormingAngle[1], pointsFormingAngle[2]));
 
                             bool invalidAngle1 = false;
-                            if (theta1 == float.NaN || theta1 == 180 )
+                            if (theta1 == float.NaN || Mathf.Approximately(theta1, 180) || Mathf.Approximately(theta1, 0))
                             {
                                 Debug.Log("Theta1 = " + theta1);
                                 invalidAngle1 = true;
                             }
                             bool invalidAngle2 = false;
-                            if (theta2 == float.NaN || theta2 == 180 )
+                            if (theta2 == float.NaN || Mathf.Approximately(theta2, 180) || Mathf.Approximately(theta2, 0))
                             {
                                 Debug.Log("Theta2 = " + theta2);
                                 invalidAngle2 = true;

@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3fc3e5856445ce4b91a131ccf1e9ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numObjects: 500
+  numObjects: 200
   roomTemplate: {fileID: 1313338563284130, guid: 522196606b9c71b4fa554a89a6570bf9,
     type: 2}
   allRooms: []
@@ -290,9 +290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b7c8a83a90e2846922964b5408d823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTriangles: []
-  roomCount: 0
-  circleIndex: 0
 --- !u!1 &1532199803
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,9 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b7c8a83a90e2846922964b5408d823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTriangles: []
-  roomCount: 1000
-  circleIndex: 0
 --- !u!4 &1532199805
 Transform:
   m_ObjectHideFlags: 0

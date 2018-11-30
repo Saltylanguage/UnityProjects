@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 public class RoomGenerator : MonoBehaviour
 {
-    public int numObjects = 25;
+
+    [SerializeField] [Range(0,200)] int numObjects = 25;
     float radius = 25;
 
     public GameObject roomTemplate;
