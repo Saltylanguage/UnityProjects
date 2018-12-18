@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4964161018019720}
   - component: {fileID: 212076577585570692}
   - component: {fileID: 136986033728503754}
-  - component: {fileID: 114023523353871806}
-  m_Layer: 0
+  - component: {fileID: 114850595102762312}
+  m_Layer: 8
   m_Name: DefenderIconObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,13 +36,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1796192222723812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.333, y: -0.011, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06624819, y: 0.79497814, z: 0.59623367}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114023523353871806
+--- !u!114 &114850595102762312
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,12 +53,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1927fd7b258756e4387080da2f37cc33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 25
-  defenderPrefab: {fileID: 1932716650938650, guid: 2a13e6b25d5b9294293ea3476164dd06,
+  defenderPrefab: {fileID: 1364656444003820, guid: 117faf1698a15894fbd144fd0e71597e,
     type: 2}
   unselectedColor:
     serializedVersion: 2
-    rgba: 4283387727
+    rgba: 5526612
 --- !u!136 &136986033728503754
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -108,7 +107,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_Sprite: {fileID: 21300010, guid: 3bc4fa5c5f3c06b4880247ea8fe9fb4a, type: 3}
-  m_Color: {r: 0.30980393, g: 0.30980393, b: 0.30980393, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

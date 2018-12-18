@@ -75,8 +75,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0779655, y: 0.1091516}
-  m_Size: {x: 0.32406902, y: 0.32406902}
+  m_Offset: {x: -0.03238237, y: 0.039411724}
+  m_Size: {x: 0.54476476, y: 0.5959662}
   m_Direction: 0
 --- !u!114 &114644026250785506
 MonoBehaviour:
@@ -91,8 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationSpeed: 5
-  damage: 50
-  mRigidBody: {fileID: 50966716055233302}
+  damage: 10
 --- !u!212 &212101179329934634
 SpriteRenderer:
   m_ObjectHideFlags: 1

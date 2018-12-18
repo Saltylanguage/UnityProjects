@@ -19,13 +19,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4386242861066202}
-  - component: {fileID: 212556040208912558}
   - component: {fileID: 95880029648239616}
-  - component: {fileID: 70406342605490572}
   - component: {fileID: 114840899908202702}
   - component: {fileID: 114682511071658676}
+  - component: {fileID: 70094785219896628}
   m_Layer: 0
   m_Name: Lizard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1607534528723674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4482441952108452}
+  - component: {fileID: 212580656307142418}
+  m_Layer: 0
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,13 +53,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1193142444576924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.79, y: 1.5154797, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4482441952108452}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &70406342605490572
+--- !u!4 &4482441952108452
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1607534528723674}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4386242861066202}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &70094785219896628
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,8 +85,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.57850504, y: -0.2489326}
-  m_Size: {x: 0.34323597, y: 0.79201436}
+  m_Offset: {x: -0.5886071, y: 0.23090637}
+  m_Size: {x: 0.5452733, y: 0.85262537}
   m_Direction: 0
 --- !u!95 &95880029648239616
 Animator:
@@ -88,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c2dc1038ea71349b57d2164a7b78d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10
   deathVFX: {fileID: 1906222994913036, guid: 740c2b3187d56c341b8cb78e8aa925c5, type: 2}
 --- !u!114 &114840899908202702
 MonoBehaviour:
@@ -101,12 +130,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d08697ad698de14a96bee481099ef14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &212556040208912558
+--- !u!212 &212580656307142418
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1193142444576924}
+  m_GameObject: {fileID: 1607534528723674}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

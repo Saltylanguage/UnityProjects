@@ -61,19 +61,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Attacker.cs" />
-    <Compile Include="Assets\Scripts\AttackerSpawner.cs" />
-    <Compile Include="Assets\Scripts\Currency.cs" />
-    <Compile Include="Assets\Scripts\CurrencySpawner.cs" />
-    <Compile Include="Assets\Scripts\Defender.cs" />
-    <Compile Include="Assets\Scripts\DefenderIcon.cs" />
-    <Compile Include="Assets\Scripts\DefenderSpawner.cs" />
-    <Compile Include="Assets\Scripts\EconomyManager.cs" />
-    <Compile Include="Assets\Scripts\GameLoader.cs" />
-    <Compile Include="Assets\Scripts\Health.cs" />
-    <Compile Include="Assets\Scripts\LevelLoader.cs" />
-    <Compile Include="Assets\Scripts\Projectile.cs" />
-    <Compile Include="Assets\Scripts\Shooter.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Attacker.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\AttackerSpawner.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Defender.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\DefenderIcon.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\DefenderSpawner.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Health.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Shooter.cs" />
+    <Compile Include="Assets\Scripts\Utility\CameraRaycaster.cs" />
+    <Compile Include="Assets\Scripts\Utility\Economy\Currency.cs" />
+    <Compile Include="Assets\Scripts\Utility\Economy\CurrencySpawner.cs" />
+    <Compile Include="Assets\Scripts\Utility\Economy\EconomyManager.cs" />
+    <Compile Include="Assets\Scripts\Utility\FlowControl\GameLoader.cs" />
+    <Compile Include="Assets\Scripts\Utility\FlowControl\LevelLoader.cs" />
+    <Compile Include="Assets\Scripts\Utility\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Utility\Layers.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/GameDev/Unity/Repos/Projects/Glitch Garden/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
