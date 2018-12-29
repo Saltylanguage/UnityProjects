@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4322651474220498}
   - component: {fileID: 212101179329934634}
   - component: {fileID: 114644026250785506}
-  - component: {fileID: 50966716055233302}
-  - component: {fileID: 70875573031354728}
+  - component: {fileID: 54621845734065666}
+  - component: {fileID: 136168677045827242}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
@@ -43,41 +43,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50966716055233302
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!54 &54621845734065666
+Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1113063036610502}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  serializedVersion: 2
   m_Mass: 1
-  m_LinearDrag: 0
+  m_Drag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Constraints: 56
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!70 &70875573031354728
-CapsuleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1113063036610502}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.03238237, y: 0.039411724}
-  m_Size: {x: 0.54476476, y: 0.5959662}
-  m_Direction: 0
 --- !u!114 &114644026250785506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,6 +72,19 @@ MonoBehaviour:
   speed: 5
   rotationSpeed: 5
   damage: 10
+--- !u!136 &136168677045827242
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1113063036610502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.24
+  m_Height: 0.44
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212101179329934634
 SpriteRenderer:
   m_ObjectHideFlags: 1

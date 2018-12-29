@@ -66,7 +66,9 @@
     <Compile Include="Assets\Scripts\Gameplay\Defender.cs" />
     <Compile Include="Assets\Scripts\Gameplay\DefenderIcon.cs" />
     <Compile Include="Assets\Scripts\Gameplay\DefenderSpawner.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Fox.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Health.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Lizard.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Projectile.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Shooter.cs" />
     <Compile Include="Assets\Scripts\Utility\CameraRaycaster.cs" />

@@ -22,12 +22,11 @@ public class Health : MonoBehaviour
         if (!deathVFX) { return; }
 
         GameObject deathVFXObject = Instantiate(deathVFX, transform.position, Quaternion.identity);
-        Destroy(deathVFXObject, 1);   
+        Destroy(deathVFXObject, 1);
     }
 
     private void Die()
     {
-        Debug.Log("Dead");
         TriggerDeathVFX();
         Destroy(gameObject);
     }

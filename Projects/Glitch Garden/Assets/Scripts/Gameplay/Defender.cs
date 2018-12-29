@@ -12,4 +12,5 @@ public class Defender : MonoBehaviour
     {
         FindObjectOfType<EconomyManager>().AddCurrency(amount);
     }
+
 }
