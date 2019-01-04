@@ -12,11 +12,14 @@ public class Lizard : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         Debug.Log("exit trigger");
 
-        GetComponent<Attacker>().SetAttackState(null);
+        if (!other.gameObject)
+        {
+            GetComponent<Attacker>().SetAttackState(null);
+        }
 
     }
 
